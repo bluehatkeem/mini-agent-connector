@@ -5,6 +5,22 @@ Extracted from the connector used by Mini Gero. Send a text question or a
 push-to-talk recording, poll for the answer, and optionally stream speech back
 to your device. Agent tools and memory stay on the host.
 
+## Mini Gero in action
+
+Mini Gero is one example of a desk companion powered by this connector.
+These are actual **avatar framebuffer captures** from the ESP32-C6 device
+(v0.13), showing four expression poses—not mockups or photos of the physical screen.
+
+| Idle | Listening | Thinking | Speaking |
+| :---: | :---: | :---: | :---: |
+| ![Mini Gero standing with a clipboard](docs/images/mini-gero-idle.png) | ![Mini Gero raising one ear to listen](docs/images/mini-gero-listening.png) | ![Mini Gero looking upward thoughtfully](docs/images/mini-gero-thinking.png) | ![Mini Gero with an open-mouth speaking expression](docs/images/mini-gero-speaking.png) |
+
+The device firmware renders and animates the avatar; the connector handles
+requests, agent responses, and audio. These screenshots are included as examples;
+the firmware and complete animation asset pack are not bundled.
+
+## How it connects
+
 ```mermaid
 flowchart LR
     Device[Desk companion or example client] -->|Bearer-authenticated LAN HTTP|Bridge[Mini Agent Connector]
@@ -24,7 +40,7 @@ flowchart LR
 - Example client, dependency check, automated tests, CI, protocol and security documentation.
 
 **Scope:** this repository is the **host connector**, not the Mini Gero display
-firmware, artwork, board drivers, or a flash backup. Use the included client
+firmware, complete avatar asset pack, board drivers, or a flash backup. Use the included client
 without hardware, or implement [protocol v1](docs/PROTOCOL.md) in your own firmware.
 Existing Mini Gero firmware remains wire-compatible; legacy service/header and
 activity names are retained deliberately. No personal memory or device settings
