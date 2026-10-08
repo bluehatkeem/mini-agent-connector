@@ -1,0 +1,13 @@
+{
+  "agent": "main",
+  "session_key": "mini-agent",
+  "model": "",
+  "thinking": "",
+  "stt_engine": "none",
+  "whisper_model": "",
+  "whisper_server": "whisper-server",
+  "tts_provider": "",
+  "tts_voice": "",
+  "openclaw": "openclaw",
+  "ffmpeg": "ffmpeg"
+}
